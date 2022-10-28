@@ -1,0 +1,134 @@
+/*C:\Users\Lenovo\Downloads\CSS_1\practica-selectores/css/Untitled-1.css*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+
+
+body{
+    background-color:#719294;
+    color:#E9E9E9;
+}
+
+*{ font-family: 'Oswald';
+
+}
+
+section{
+    width: auto;
+    height: vh;
+    background-color: #719294;
+    border: #000000;
+    border-style: solid;
+    border-width: 2vw;
+    margin: 8px;
+}
+header {
+    font-size: 15vh;
+    text-align: center;
+
+    align-content: center;
+    margin-block: 30px;
+    image-rendering: auto;
+}
+
+h1 {
+    font-family:'Oswald';
+    font-size:3vw;
+    text-align: match-parent;
+}
+
+p{font:'Oswald', light ;}
+
+
+.full{
+    width: vw-15px;
+	margin: 15px;
+	display: grid;
+    row-gap: 5vh;
+    grid-template-areas: "nav"
+                        "header"
+                        "container"
+                        "pie";
+}
+
+.full .nav {
+    position: sticky;
+    top:0px;
+	background: #000000;
+    height: 10vh;
+    width: vw-15px;
+    display:flex;
+    align-items:baseline;
+    grid-area: nav;
+    font-size: 2.8vw;
+    color:#505946;
+}
+
+.full.header{
+    grid-area: header;
+}
+
+
+.full.container{
+    grid-area: container;
+}
+
+.full .pie {
+    position: relative;
+    bottom:0;
+    min-height: 10vh;
+	grid-row: 9;
+    width: vw;
+	background: black;
+    background-size: auto;
+    justify-content: stretch;
+    grid-area: pie;
+}
+
+@media screen and (max-width: 768px){
+	
+    .full .nav {
+        font-size: 25px;
+        word-spacing: 0.5vw;
+        vertical-align: middle;
+        height: vh;
+        
+    }
+
+    .full .pie {
+        position:sticky;
+        width: vw;
+    }
+    
+    .full{
+        grid-template-areas: "nav"
+                            "nav"
+                            "header"
+                            "container"
+                            "pie"
+                            "pie";
+                        }
+	}
+
+    @media screen and (min-width: 1200px){
+
+        
+        .full{
+            grid-template-areas: 
+                                "nav header"
+                                "nav container"
+                                "pie pie";   
+        }
+
+        .full .nav {
+            position: sticky;
+            display: block;
+            width: 19vw;
+            height: 100vh;
+            font-size: 2vw;
+        }
+
+        .full .pie{
+            position: relative;
+            width: auto;
+        }
+    }
